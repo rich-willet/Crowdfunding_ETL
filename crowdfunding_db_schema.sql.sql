@@ -13,16 +13,14 @@ CREATE TABLE "campaign" (
     "contact_id" INT   NOT NULL,
     "company_name" VARCHAR   NOT NULL,
     "description" VARCHAR   NOT NULL,
-    "goal" INT   NOT NULL,
-    "pledged" INT   NOT NULL,
+    "goal" FLOAT   NOT NULL,
+    "pledged" FLOAT   NOT NULL,
     "outcome" VARCHAR   NOT NULL,
     "backers_count" INT   NOT NULL,
     "country" VARCHAR   NOT NULL,
     "currency" VARCHAR   NOT NULL,
-    "launch_date" DATE   NOT NULL,
-    "end_date" DATE   NOT NULL,
-    "staff_pick" BOOLEAN   NOT NULL,
-    "spotlight" BOOLEAN   NOT NULL,
+    "launch_date" TIMESTAMP  NOT NULL,
+    "end_date" TIMESTAMP  NOT NULL,
     "category_id" INT   NOT NULL,
     "subcategory_id" INT   NOT NULL,
     CONSTRAINT "pk_campaign" PRIMARY KEY (
@@ -69,4 +67,3 @@ SELECT * FROM campaign;
 SELECT * FROM category; 
 SELECT * FROM contacts; 
 SELECT * FROM subcategory; 
-
